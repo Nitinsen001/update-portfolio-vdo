@@ -1,0 +1,56 @@
+Nitin Sen
+ƒ 7067186232 # nitinsen91650@gmail.com # https://Linkedin.com/in/nitinsen001 # https://github.com/Nitinsen001
+Education
+Education
+B.Tech in Artificial Intelligence and Machine Learning 	2023 – 2027 Expected
+Jawaharlal Institute of Technology, Borawan (Affiliated to RGPV) 	CGPA: 7.41/10
+Current CGPA: 7.41/10 (Till th Semester)
+Experience
+Python Intern – Infosys Springboard February 2026 – Present				       Remote Internship
+• Working on a real-world project AirAware – Smart Air Quality Prediction System for AQI prediction.
+• Implemented machine learning models using Python to predict the next 7 days AQI and classify air quality categories .
+• Developed an interactive UI using Streamlit and integrated automated alerts based on predicted air quality levels.
+Web Development Intern - CodeAlpha June 2025 – July 2025                         				 Remote internship
+Successfully completed a 1 month internship focused on web development projects.
+Built and submitted projects involving frontend (HTML, CSS, JavaScript) and backend using Django.
+Enhanced skills in responsive design, dynamic web pages, and Full-stack development.
+Research Participant – Harvard-Affiliated Innovation Challenge 	june 2025-present
+JIT Borawan
+Participated in a prestigious research-driven innovation event conducted by a Harvard university professor.
+Selected among the Top 20 teams for the final round presentation scheduled for 12th July 2025.
+Collaborated on  proposing innovative solutions addressing social challenges and technical feasibility..
+Projects
+AirAware – Smart Air Quality Prediction System (ML Project)					       February 2026
+Developed an AQI forecasting system using Python and Facebook Prophet to predict air quality trends from historical pollution             data.
+Performed data preprocessing, feature engineering, and exploratory data analysis (EDA) on datasets including PM2.5, PM10,          NOx, CO, and O₃.
+Built an interactive Streamlit dashboard displaying current AQI, 7-day forecasts, air quality categories, and automated alerts.
+E-commerce store(Django Project) 	June 2025
+Developed a fully functional e-commerce website using Django, HTML, CSS, and JavaScript.
+Implemented features such as user registration with email verification, login system, product categories, search functionality, cart, and PayPal payment integration.
+Designed responsive UI and ensured seamless user experience with modern CSS animations and JavaScript interactivity.
+AI-Powered Career Recommender System (ML Project) 	March 2026
+Developed a career recommendation system using Python, Django, and Scikit-Learn to match users with suitable career paths based on skills and MBTI personality traits.
+Implemented NLP-based resume parsing to extract key information such as skills, education, and experience from uploaded PDFs and DOCX files.
+Built features like skill gap analysis and a Django admin dashboard for dataset management and ML model updates.
+Student Record Management System (C Project) 	Dec 2024
+Designed and implemented a console-based application in C language for efficient management of student academic records.
+Applied file handling and data structures (arrays, linked lists) for storing and retrieving information.
+Relevant Coursework
+Machine Learning (Introductory Level)
+Web Development (HTML, CSS, JavaScript
+(Basics), Django)
+Technical Skills
+Python Programming
+Object-Oriented Programming (OOPs)
+C and C++ Programming
+Programming Languages: Python, C, C++, HTML, CSS
+Tools & Libraries: Git & Github, VS Code, jupyter notebook , Pandas, NumPy, Matplotlib, Scikit-learn, Sqlight3, Mysql, Plsql
+Technical Concepts: Machine Learning (Basics), Data Structures and Algorithms, Web Development (Django Basics), File Handling
+Certifications
+Programming in python for beginners – Infosys
+Introduction to Machine learning - Data flair
+Machine learning in python environment - Alison
+GFG – 160 DAY OF PROBLEM SOLVING – GeeksforGeeks
+• C/C++  Essentials training – LinkedIn learning
+Academic Accomplishments
+Selected among Top 20 teams a Harvard-affiliated Research Event held at the collage, recognized for innovation and problem-solving abilities.
