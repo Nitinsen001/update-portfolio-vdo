@@ -55,6 +55,12 @@ app.post('/api/contact', async (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
-  console.log(`Contact server running on http://localhost:${PORT}`);
-});
+// On Vercel the app is imported as a serverless function (process.env.VERCEL is "1"),
+// so we only start a local listener during development.
+if (!process.env.VERCEL) {
+  app.listen(PORT, () => {
+    console.log(`Contact server running on http://localhost:${PORT}`);
+  });
+}
+
+export default app;
