@@ -5,55 +5,62 @@ const skillsData = [
   {
     category: 'Programming Languages',
     icon: Code2,
-    description: 'Meri pehli programming language Python hai. Maine isko Linxelity se certified kiya hai.',
+    description: 'Core languages and frameworks used across my ML, backend and web projects.',
     skills: [
-      { name: 'Python', project: 'AI Chatbot, Data Analysis Tool', cert: 'Linxelity', desc: 'Meri pehli language, default project me use ki.' },
-      { name: 'C', project: 'System Programming Projects', cert: null, desc: 'Low-level programming ke liye.' },
-      { name: 'C++', project: 'Game Development Projects', cert: null, desc: 'OOP concepts ke saath.' },
-      { name: 'HTML5', project: 'Portfolio Website', cert: 'W3Schools', desc: 'Web development ki foundation.' },
-      { name: 'CSS3', project: 'Portfolio Website', cert: null, desc: 'Responsive design ke liye.' },
-      { name: 'JavaScript', project: 'Interactive Web Apps', cert: 'Udemy', desc: 'Frontend interactivity.' },
-      { name: 'Django', project: 'E-commerce Website', cert: null, desc: 'Python web framework.' },
+      { name: 'Python', project: 'AirAware Smart Air Quality Prediction System, AI Career Recommendation System', cert: 'LinkedIn Learning', desc: 'Primary language, used across Machine Learning, Data Science, Automation and Backend Development.' },
+      { name: 'C', project: 'Student Record Management System', cert: 'LinkedIn Learning', desc: 'First programming language, learned in first year engineering; built strong programming fundamentals.' },
+      { name: 'C++', project: 'Student Record Management System', cert: 'LinkedIn Learning', desc: 'Learned core OOP concepts alongside C in first year.' },
+      { name: 'HTML5', project: 'Portfolio Website, E-commerce Website', cert: 'HTML Certification', desc: 'Semantic markup foundation for portfolio and e-commerce projects.' },
+      { name: 'CSS3', project: 'Portfolio Website, E-commerce Website', cert: null, desc: 'Responsive layouts, usually combined with Bootstrap and AI-generated frontend designs.' },
+      { name: 'JavaScript', project: 'Portfolio Website, E-commerce Website', cert: null, desc: 'Basic knowledge, used mainly for frontend interactivity.' },
+      { name: 'Django', project: 'E-commerce Website, AI Career Recommendation System, Insurance Agent Chatbot, Face Attendance System, Social Media Platform', cert: null, desc: 'Primary backend framework for building full-stack Python web applications.' },
+      { name: 'FastAPI', project: 'REST API Projects', cert: null, desc: 'Python backend framework used to build fast, lightweight REST APIs.' },
     ],
   },
   {
-    category: 'AI & Data',
+    category: 'AI & Data Science',
     icon: Cpu,
-    description: 'Machine Learning aur Data Analysis me expertise.',
+    description: 'Machine Learning, data analysis and visualization skills applied across real projects.',
     skills: [
-      { name: 'Machine Learning', project: 'Predictive Model for Sales', cert: 'Coursera', desc: 'Supervised aur Unsupervised learning.' },
-      { name: 'Pandas', project: 'Data Cleaning Pipeline', cert: null, desc: 'Data manipulation ke liye.' },
-      { name: 'NumPy', project: 'Scientific Computing', cert: null, desc: 'Numeric computing.' },
-      { name: 'Matplotlib', project: 'Data Visualization Dashboard', cert: null, desc: 'Graphs aur charts.' },
-      { name: 'Scikit-learn', project: 'ML Model Deployment', cert: 'IBM', desc: 'Machine learning algorithms.' },
-      { name: 'Streamlit', project: 'ML Web App', cert: null, desc: 'Quick AI app development.' },
+      { name: 'Machine Learning', project: 'AirAware Smart Air Quality Prediction System, AI Career Recommendation System', cert: 'Andrew Ng, GFG, W3Schools', desc: 'Supervised and unsupervised learning concepts, backed by 2 ML certificates.' },
+      { name: 'Pandas', project: 'Data Analysis Projects', cert: null, desc: 'Data cleaning, processing and feature engineering.' },
+      { name: 'NumPy', project: 'Data Analysis Projects', cert: null, desc: 'Numerical computing for data and model pipelines.' },
+      { name: 'Matplotlib', project: 'Data Analysis Dashboard', cert: null, desc: 'Data visualization for exploratory analysis and reporting.' },
+      { name: 'Scikit-learn', project: 'AI Career Recommendation System', cert: null, desc: 'Model training and evaluation for classification and regression tasks.' },
+      { name: 'Streamlit', project: 'AirAware, Book Web Scraper, KBC Game, Data Analysis Dashboard', cert: null, desc: 'Rapid deployment of interactive ML and data apps.' },
+      { name: 'Power BI', project: 'Data Analysis Dashboard', cert: null, desc: 'Business intelligence dashboards for data-driven insights.' },
+      { name: 'Facebook Prophet', project: 'AirAware Forecasting', cert: null, desc: 'Time series forecasting for air quality prediction.' },
+      { name: 'Data Analytics', project: 'Data Analysis Dashboard, AirAware', cert: null, desc: 'End-to-end EDA, visualization, data cleaning and insight generation.' },
     ],
   },
   {
     category: 'Databases & Tools',
     icon: Database,
-    description: 'Database management aur development tools.',
+    description: 'Development tools and database systems used throughout my project workflow.',
     skills: [
-      { name: 'Git', project: 'All Projects', cert: null, desc: 'Version control.' },
-      { name: 'GitHub', project: 'All Projects', cert: null, desc: 'Code hosting.' },
-      { name: 'VS Code', project: 'All Projects', cert: null, desc: 'Primary code editor.' },
-      { name: 'Jupyter Notebook', project: 'Data Analysis Projects', cert: null, desc: 'Interactive data science.' },
-      { name: 'SQLite3', project: 'Local DB Projects', cert: null, desc: 'Lightweight database.' },
-      { name: 'MySQL', project: 'Web Applications', cert: 'Oracle', desc: 'Production database.' },
-      { name: 'PL/SQL', project: 'Database Procedures', cert: null, desc: 'Oracle programming.' },
+      { name: 'Git', project: 'All Projects', cert: null, desc: 'Version control for tracking and managing project history.' },
+      { name: 'GitHub', project: 'All Projects', cert: null, desc: 'Code hosting and collaboration across all projects.' },
+      { name: 'VS Code', project: 'All Projects', cert: null, desc: 'Primary code editor for development across all tech stacks.' },
+      { name: 'Jupyter Notebook', project: 'Data Analysis Projects', cert: null, desc: 'Interactive environment for data science and model prototyping.' },
+      { name: 'SQLite3', project: 'Local Application Projects', cert: null, desc: 'Lightweight embedded database for local application storage.' },
+      { name: 'MySQL', project: 'E-commerce Website, Social Media Platform', cert: null, desc: 'Relational database powering production-grade web applications.' },
+      { name: 'PL/SQL', project: 'Database Procedure Projects', cert: null, desc: 'Stored procedures and database programming on Oracle systems.' },
     ],
   },
   {
     category: 'Concepts & Development',
     icon: Layers3,
-    description: 'Core computer science concepts.',
+    description: 'Core computer science and engineering concepts applied across projects.',
     skills: [
-      { name: 'OOP', project: 'All OOP Projects', cert: null, desc: 'Object oriented programming.' },
-      { name: 'Data Structures', project: 'Algorithm Implementation', cert: null, desc: 'Arrays, Linked Lists, Trees.' },
-      { name: 'Algorithms', project: 'Competitive Programming', cert: null, desc: 'Sorting, Searching, Graph.' },
-      { name: 'Web Development', project: 'Full Stack Projects', cert: null, desc: 'Frontend aur Backend.' },
-      { name: 'Responsive Design', project: 'Portfolio Website', cert: null, desc: 'Mobile-first design.' },
-      { name: 'File Handling', project: 'Data Processing Tools', cert: null, desc: 'Read/Write operations.' },
+      { name: 'Object Oriented Programming', project: 'Student Record Management System', cert: null, desc: 'Designing modular, reusable code using classes and objects.' },
+      { name: 'Data Structures', project: 'Algorithm Implementation Projects', cert: null, desc: 'Arrays, linked lists and trees for efficient data handling.' },
+      { name: 'Algorithms', project: 'Algorithm Implementation Projects', cert: null, desc: 'Sorting, searching and graph algorithms for problem solving.' },
+      { name: 'Web Development', project: 'Portfolio Website, E-commerce Website, Social Media Platform', cert: null, desc: 'Full-stack development across frontend and backend layers.' },
+      { name: 'REST API Development', project: 'REST API Projects', cert: null, desc: 'Designing and building RESTful services for client-server communication.' },
+      { name: 'Responsive Design', project: 'Portfolio Website', cert: null, desc: 'Mobile-first layouts that adapt cleanly across screen sizes.' },
+      { name: 'Feature Engineering', project: 'AI Career Recommendation System, AirAware', cert: null, desc: 'Transforming raw data into meaningful inputs for ML models.' },
+      { name: 'Exploratory Data Analysis', project: 'Data Analysis Dashboard', cert: null, desc: 'Uncovering patterns and insights through systematic data exploration.' },
+      { name: 'File Handling', project: 'Data Processing Tools', cert: null, desc: 'Reading, writing and managing data files programmatically.' },
     ],
   },
 ];
@@ -340,8 +347,8 @@ const Skills = () => {
 
         .skill-row {
           display: grid;
-          grid-template-columns: 200px 1fr;
-          gap: 16px;
+          grid-template-columns: 253px 1fr;
+          gap: 50px;
           padding: 12px 16px;
           border-radius: 12px;
           background: #FAFAFA;

@@ -42,16 +42,10 @@ const About = () => {
 
           <h2 className="text-4xl md:text-5xl font-black text-black mb-4">Hello!</h2>
           <p className="text-lg font-bold mb-12 leading-relaxed max-w-3xl text-red-50">
-            Hi, I'm{" "}
-            <span className="text-black text-xl font-black mx-1 tracking-wide uppercase">
-              Nitin Sen
-            </span>
-            , a B.Tech student in Artificial Intelligence and Machine Learning at Jawaharlal
-            Institute of Technology, Borawan. I build practical software that bridges
-            full-stack development with data-driven intelligence. I am currently working
-            on AirAware, a smart AQI prediction system, and I have completed web
-            development and research internships that sharpened my real-world product
-            delivery skills.
+            Hi, I’m <span className="text-black text-xl font-black mx-1 tracking-wide uppercase">Nitin Sen</span>, a B.Tech AI &amp; ML engineer focusing on large‑scale predictive models, MLOps pipelines, and research in generative AI. I design end‑to‑end systems that combine robust backend engineering with cutting‑edge machine learning.
+          </p>
+          <p className="text-sm font-medium text-white-80 mb-8">
+            Research Interests: Large Language Models, Diffusion Models, Reinforcement Learning, AI‑driven Climate Analytics, Scalable MLOps.
           </p>
 
           {/* Horizontal Skills Row (Transparent & Large) */}

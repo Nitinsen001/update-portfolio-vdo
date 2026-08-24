@@ -3,6 +3,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 // Adjusted import path for the video
 import heroVideo from '../assets/hero video/herovideo.mp4';
+import { Typewriter } from 'react-simple-typewriter';
 
 const Hero = () => {
   const videoRef = useRef(null);
@@ -60,46 +61,68 @@ const Hero = () => {
           
           {/* Main Heading */}
           <h1 
-            data-aos="fade-up"
-            data-aos-delay="50"
-            className="text-white text-4xl sm:text-5xl md:text-6xl font-black mb-5 tracking-tight leading-[1.05]"
-          >
-            Hi, I’m a <br /> 
-            <span className="relative text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-white/90 drop-shadow-[0_2px_10px_rgba(0,0,0,0.15)]">
-              Nitin Sen
-            </span>
-          </h1>
+              data-aos="fade-up"
+              data-aos-delay="50"
+              className="text-white text-4xl sm:text-5xl md:text-6xl font-black mb-5 tracking-tight leading-[1.05]"
+            >
+              Hi, I’m a <br /> 
+              <span className="relative text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-white/90 drop-shadow-[0_2px_10px_rgba(0,0,0,0.15)]"
+                >
+                Nitin Sen
+              </span>
+              <br/>
+              <span className="text-sm md:text-base text-white/80">
+                <Typewriter
+                  words={['AI/ML Engineer', 'Researcher', 'Full‑Stack Developer']}
+                  loop={0}
+                  cursor
+                  cursorStyle="|"
+                  typeSpeed={70}
+                  deleteSpeed={50}
+                  delaySpeed={2000}
+                />
+              </span>
+            </h1>
 
           {/* Subheading */}
           <p 
-            data-aos="fade-up"
-            data-aos-delay="200"
-            className="text-white/90 text-sm md:text-base lg:text-lg font-medium mb-8 max-w-sm md:max-w-md leading-relaxed drop-shadow-sm"
-          >
-            B.Tech AI & Machine Learning student building predictive systems and full-stack web applications with Python, Django, React, and intelligent data workflows.
-          </p>
+              data-aos="fade-up"
+              data-aos-delay="200"
+              className="text-white/90 text-sm md:text-base lg:text-lg font-medium mb-4 max-w-sm md:max-w-md leading-relaxed drop-shadow-sm"
+            >
+              B.Tech AI & Machine Learning student building predictive systems and full-stack web applications with Python, Django, React, and intelligent data workflows.
+            </p>
+            {/* Quick Stats Badges */}
+            <div className="flex gap-3 mb-6" data-aos="fade-up" data-aos-delay="250">
+              <span className="px-3 py-1 text-xs font-semibold bg-white/10 text-white rounded-full border border-white/20">⚡ 3 LLM Projects</span>
+              <span className="px-3 py-1 text-xs font-semibold bg-white/10 text-white rounded-full border border-white/20">📊 150+ GitHub Commits</span>
+              <span className="px-3 py-1 text-xs font-semibold bg-white/10 text-white rounded-full border border-white/20">⏳ 1.5y AI Experience</span>
+            </div>
 
           {/* Buttons */}
           <div 
             data-aos="fade-up"
             data-aos-delay="400"
-            className="flex flex-row items-center gap-4 w-full"
+            className="flex flex-row flex-wrap items-center gap-4 w-full"
           >
             {/* Primary Button */}
             <a 
-              href="#projects" 
-              className="px-6 py-2.5 md:px-7 md:py-3 text-xs md:text-sm rounded-full bg-white text-black font-bold hover:bg-neutral-100 transition-all duration-300 transform hover:-translate-y-0.5 shadow-lg inline-block text-center"
-            >
-              View My Work
-            </a>
-            
-            {/* Secondary Button */}
-            <a 
-              href="#contact" 
-              className="px-6 py-2.5 md:px-7 md:py-3 text-xs md:text-sm rounded-full bg-black/10 border border-white text-white font-bold hover:bg-white/10 transition-all duration-300 backdrop-blur-md transform hover:-translate-y-0.5 inline-block text-center"
-            >
-              Contact Me
-            </a>
+                href="#projects" 
+                className="px-6 py-2.5 md:px-7 md:py-3 text-xs md:text-sm rounded-full bg-white text-black font-bold hover:bg-neutral-100 transition-all duration-300 transform hover:-translate-y-0.5 shadow-lg inline-block text-center"
+              >
+                View My Work
+              </a>
+              
+              {/* Resume Download Button */}
+              <a 
+                href="/Nitin%20Resume%20perfect%20(1).docx"
+                download="Nitin Resume perfect (1).docx"
+                className="px-6 py-2.5 md:px-7 md:py-3 text-xs md:text-sm rounded-full bg-white/10 text-white font-bold hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-0.5 border border-white/30 inline-block text-center"
+              >
+                Download Resume
+              </a>
+              
+              
           </div>
         </div>
 
