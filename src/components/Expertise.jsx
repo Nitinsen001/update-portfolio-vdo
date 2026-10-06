@@ -19,6 +19,7 @@ const projects = [
     tech: ['Python', 'Flask', 'AI', 'ML'],
     cover: 'linear-gradient(150deg, #1a0b2e 0%, #4b1d7a 45%, #8b5cf6 100%)',
     liveUrl: 'https://aicrs-h2j4.onrender.com',
+    previewImage: '/project-previews/ai-career.png',
     githubUrl: 'https://github.com/Nitinsen001/AI_Career_Recommender_update.git',
   },
   {
@@ -32,8 +33,12 @@ const projects = [
     tech: ['Python', 'Streamlit', 'EDA', 'Visualization'],
     cover: 'linear-gradient(150deg, #0f172a 0%, #2563eb 45%, #38bdf8 100%)',
     liveUrl: 'https://airawaresmartqualitypredictionsystem.streamlit.app/',
+    previewImage: '/project-previews/airaware.svg',
     githubUrl: 'https://github.com/Nitinsen001/AirAware-system.git',
   },
+
+
+
   {
     number: '03',
     title: 'Kaggle Capstone Project',
@@ -136,6 +141,7 @@ const projects = [
     tech: ['React', 'Node.js', 'Stripe', 'E-commerce'],
     cover: 'linear-gradient(150deg, #431407 0%, #c2410c 45%, #fb923c 100%)',
     liveUrl: 'https://code-alpha-ecommerce-5ayn.vercel.app/',
+    previewImage: '/project-previews/ecommerce.png',
     githubUrl: 'https://github.com/Nitinsen001/CodeAlpha-ecommerce.git',
   },
   {
@@ -177,13 +183,26 @@ const projects = [
     liveUrl: '#',
     githubUrl: 'https://github.com/Nitinsen001/KBC-GAME.git',
   },
+  
+  {
+    number: '14',
+    title: 'Campus Solve AI',
+    tagline: 'AI-powered complaint intelligence for smarter campuses.',
+    description:
+      'An intelligent campus complaint management system that uses machine learning and NLP to analyze student complaints, classify issues, predict urgency, and help administrators prioritize and resolve campus problems efficiently.',
+    role: 'AI/ML Developer',
+    year: '2026',
+    tech: ['Python', 'Django', 'Machine Learning', 'NLP', 'Scikit-learn', 'Pandas',      'HTML', 'CSS'],
+    cover: 'linear-gradient(150deg, #0f172a 0%, #1e3a5f 45%, #0ea5e9 100%)',
+    liveUrl: 'https://campus-solve-ai.vercel.app/',
+    previewImage: '/project-previews/problemsolveai.png',
+    githubUrl: 'https://github.com/Nitinsen001/campus_solve_ai.git',
+  },
 ];
 
-// Left "cover" face: if a live demo exists, show a mini browser frame
-// with the actual hosted site loaded inside it (like a live preview).
-// Otherwise fall back to the original gradient/typographic cover.
 const CoverFace = ({ project }) => {
-  const hasLiveDemo = Boolean(project.liveUrl) && project.liveUrl !== '#';
+  const hasLivePreview =
+    Boolean(project.liveUrl) && project.liveUrl !== '#' && Boolean(project.previewImage);
 
   return (
     <div
@@ -198,45 +217,25 @@ const CoverFace = ({ project }) => {
         }}
       />
 
-      {hasLiveDemo ? (
+      {hasLivePreview ? (
         <>
-          {/* Mini browser frame showing the actual hosted site */}
-          <div className="absolute inset-4 md:inset-6 rounded-xl overflow-hidden border border-white/20 shadow-2xl bg-white">
-            <div className="h-6 md:h-7 bg-gray-100 flex items-center gap-1.5 px-3 border-b border-gray-200 shrink-0">
-              <span className="w-2 h-2 rounded-full bg-red-400" />
-              <span className="w-2 h-2 rounded-full bg-yellow-400" />
-              <span className="w-2 h-2 rounded-full bg-green-400" />
-              <span className="ml-2 text-[9px] text-gray-400 font-medium truncate">
-                {project.liveUrl.replace(/^https?:\/\//, '')}
-              </span>
-            </div>
-            <div className="relative w-full h-[calc(100%-1.5rem)] md:h-[calc(100%-1.75rem)] overflow-hidden bg-white">
-              <iframe
-                src={project.liveUrl}
-                title={project.title}
-                className="absolute top-0 left-0 border-0 pointer-events-none select-none"
-                style={{
-                  width: '400%',
-                  height: '400%',
-                  transform: 'scale(0.25)',
-                  transformOrigin: 'top left',
-                }}
-                loading="lazy"
-                sandbox="allow-scripts allow-same-origin"
-              />
-            </div>
-          </div>
-
-          {/* Number + title overlay */}
-          <div className="absolute top-4 left-4 z-10 font-serif italic text-white/30 text-4xl md:text-5xl leading-none select-none drop-shadow-sm">
-            {project.number}
-          </div>
-          <div className="relative z-10 mt-auto p-5 pt-10 bg-gradient-to-t from-black/70 via-black/25 to-transparent">
-            <h3 className="text-white text-xl md:text-2xl font-black tracking-tight leading-[1.05] mb-1 drop-shadow-sm">
-              {project.title}
-            </h3>
-            <p className="text-white/70 text-xs font-medium italic font-serif">{project.tagline}</p>
-          </div>
+          <a
+            href={project.liveUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`Open ${project.title} live website`}
+            className="absolute inset-0 flex items-center justify-center bg-gray-100"
+          >
+            <img
+              src={project.previewImage}
+              alt={`${project.title} homepage`}
+              className="h-full w-full object-contain"
+              loading="lazy"
+            />
+          </a>
+          <span className="absolute top-4 right-4 z-10 rounded-full bg-black/60 p-2 text-white shadow">
+            <ExternalLink className="h-4 w-4" />
+          </span>
         </>
       ) : (
         <>
@@ -474,17 +473,19 @@ const Projects = () => {
                           ))}
                         </div>
                         <div className="flex items-center gap-3 mt-auto">
-                          <motion.a
-                            href={project.liveUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="group inline-flex items-center gap-2 bg-[#ff2a2a] text-white text-sm font-bold px-5 py-2.5 rounded-full shadow-[0_10px_25px_rgba(255,42,42,0.35)] hover:shadow-[0_14px_32px_rgba(255,42,42,0.5)] transition-all duration-300"
-                            whileHover={{ scale: 1.04, y: -2 }}
-                            whileTap={{ scale: 0.96 }}
-                          >
-                            Live Demo
-                            <ExternalLink className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                          </motion.a>
+                          {project.liveUrl && project.liveUrl !== '#' && (
+                            <motion.a
+                              href={project.liveUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="group inline-flex items-center gap-2 bg-[#ff2a2a] text-white text-sm font-bold px-5 py-2.5 rounded-full shadow-[0_10px_25px_rgba(255,42,42,0.35)] hover:shadow-[0_14px_32px_rgba(255,42,42,0.5)] transition-all duration-300"
+                              whileHover={{ scale: 1.04, y: -2 }}
+                              whileTap={{ scale: 0.96 }}
+                            >
+                              Live Demo
+                              <ExternalLink className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                            </motion.a>
+                          )}
                           <motion.a
                             href={project.githubUrl}
                             target="_blank"
