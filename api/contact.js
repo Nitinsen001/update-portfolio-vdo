@@ -1,12 +1,11 @@
-import express from 'express';
-import cors from 'cors';
 import { sendContactEmail } from '../lib/contactApi.js';
 
-const app = express();
-app.use(cors());
-app.use(express.json());
+export default async function handler(req, res) {
+  if (req.method !== 'POST') {
+    res.setHeader('Allow', 'POST');
+    return res.status(405).json({ success: false, message: 'Method not allowed.' });
+  }
 
-app.post('/api/contact', async (req, res) => {
   const { name, email, message } = req.body || {};
 
   if (!name || !email || !message) {
@@ -20,6 +19,4 @@ app.post('/api/contact', async (req, res) => {
     console.error('Email sending failed:', error);
     res.status(500).json({ success: false, message: 'Unable to send message right now. Please try again later.' });
   }
-});
-
-export default app;
+}

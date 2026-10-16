@@ -1,16 +1,36 @@
-# React + Vite
+# Video Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React + Vite portfolio with a serverless contact form.
 
-Currently, two official plugins are available:
+## Contact form on Vercel
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The contact endpoint sends email through [Resend](https://resend.com) over HTTPS. Gmail SMTP credentials are not used, since SMTP connections are not suitable for many serverless deployments.
 
-## React Compiler
+1. Create a Resend account and generate an API key.
+2. Verify a sending domain in Resend. Set `CONTACT_FROM_EMAIL` to an address on that verified domain, such as `Portfolio <contact@example.com>`.
+3. In the Vercel project, open **Settings → Environment Variables** and add:
+   - `RESEND_API_KEY`: your Resend API key
+   - `CONTACT_EMAIL`: the inbox that should receive contact form messages
+   - `CONTACT_FROM_EMAIL`: the sender address on your verified domain
+4. Apply the variables to the Production environment (and Preview if needed), then redeploy.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The local `.env` file is ignored by Git. For local use, add the same variables there and run `npm run server` alongside `npm run dev`.
 
-## Expanding the ESLint configuration
+## Development
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```sh
+npm install
+npm run dev
+```
+
+In a second terminal, run the local API server:
+
+```sh
+npm run server
+```
+
+## Build
+
+```sh
+npm run build
+```
