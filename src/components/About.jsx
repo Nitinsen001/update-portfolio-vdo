@@ -1,8 +1,12 @@
 import React from 'react';
 import stackImage from '../assets/about/image.png';
-import reactImage from '../assets/about/react.png';
-import nodeImage from '../assets/about/node.png';
-import mongoImage from '../assets/about/mongodb.png';
+
+const fieldImages = [
+  { src: 'https://www.djangoproject.com/m/img/logos/django-logo-positive.svg', alt: 'Official Django logo', label: 'Django' },
+  { src: '/field-icons/machine-learning.svg', alt: 'Machine Learning', label: 'Machine Learning' },
+  { src: '/field-icons/data-science.svg', alt: 'Data Science', label: 'Data Science' },
+  { src: '/field-icons/data-analysis.svg', alt: 'Data Analysis', label: 'Data Analysis' },
+];
 
 const About = () => {
   return (
@@ -48,26 +52,14 @@ const About = () => {
             Research Interests: Large Language Models, Diffusion Models, Reinforcement Learning, AI‑driven Climate Analytics, Scalable MLOps.
           </p>
 
-          {/* Horizontal Skills Row (Transparent & Large) */}
-          <div className="flex items-center gap-10 mt-8">
-            <img
-              data-aos="zoom-in" data-aos-delay="300"
-              src={reactImage}
-              alt="React"
-              className="w-20 h-20 md:w-24 md:h-24 object-contain hover:scale-110 transition-transform duration-300 cursor-pointer drop-shadow-2xl"
-            />
-            <img
-              data-aos="zoom-in" data-aos-delay="450"
-              src={nodeImage}
-              alt="Node.js"
-              className="w-20 h-20 md:w-24 md:h-24 object-contain hover:scale-110 transition-transform duration-300 cursor-pointer drop-shadow-2xl"
-            />
-            <img
-              data-aos="zoom-in" data-aos-delay="600"
-              src={mongoImage}
-              alt="MongoDB"
-              className="w-20 h-20 md:w-24 md:h-24 object-contain hover:scale-110 transition-transform duration-300 cursor-pointer drop-shadow-2xl"
-            />
+          {/* Field focus visuals */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8 max-w-3xl">
+            {fieldImages.map(({ src, alt, label }, index) => (
+              <div key={alt} data-aos="zoom-in" data-aos-delay={300 + index * 120} className="flex flex-col items-center gap-2 group">
+                <img src={src} alt={alt} className="w-20 h-20 md:w-24 md:h-24 object-contain group-hover:scale-110 transition-transform duration-300 drop-shadow-xl" />
+                <span className="text-xs md:text-sm text-white font-bold text-center">{label}</span>
+              </div>
+            ))}
           </div>
 
         </div>

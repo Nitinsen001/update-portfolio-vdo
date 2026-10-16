@@ -12,7 +12,7 @@ const skillsData = [
       { name: 'C++', project: 'Student Record Management System', cert: 'LinkedIn Learning', desc: 'Learned core OOP concepts alongside C in first year.' },
       { name: 'HTML5', project: 'Portfolio Website, E-commerce Website', cert: 'HTML Certification', desc: 'Semantic markup foundation for portfolio and e-commerce projects.' },
       { name: 'CSS3', project: 'Portfolio Website, E-commerce Website', cert: null, desc: 'Responsive layouts, usually combined with Bootstrap and AI-generated frontend designs.' },
-      { name: 'JavaScript', project: 'Portfolio Website, E-commerce Website', cert: null, desc: 'Basic knowledge, used mainly for frontend interactivity.' },
+      
       { name: 'Django', project: 'E-commerce Website, AI Career Recommendation System, Insurance Agent Chatbot, Face Attendance System, Social Media Platform', cert: null, desc: 'Primary backend framework for building full-stack Python web applications.' },
       { name: 'FastAPI', project: 'REST API Projects', cert: null, desc: 'Python backend framework used to build fast, lightweight REST APIs.' },
     ],
@@ -56,7 +56,7 @@ const skillsData = [
       { name: 'Data Structures', project: 'Algorithm Implementation Projects', cert: null, desc: 'Arrays, linked lists and trees for efficient data handling.' },
       { name: 'Algorithms', project: 'Algorithm Implementation Projects', cert: null, desc: 'Sorting, searching and graph algorithms for problem solving.' },
       { name: 'Web Development', project: 'Portfolio Website, E-commerce Website, Social Media Platform', cert: null, desc: 'Full-stack development across frontend and backend layers.' },
-      { name: 'REST API Development', project: 'REST API Projects', cert: null, desc: 'Designing and building RESTful services for client-server communication.' },
+      
       { name: 'Responsive Design', project: 'Portfolio Website', cert: null, desc: 'Mobile-first layouts that adapt cleanly across screen sizes.' },
       { name: 'Feature Engineering', project: 'AI Career Recommendation System, AirAware', cert: null, desc: 'Transforming raw data into meaningful inputs for ML models.' },
       { name: 'Exploratory Data Analysis', project: 'Data Analysis Dashboard', cert: null, desc: 'Uncovering patterns and insights through systematic data exploration.' },

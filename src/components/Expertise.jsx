@@ -62,7 +62,8 @@ const projects = [
     year: '2023',
     tech: ['JavaScript', 'HTML', 'CSS', 'Voice UI'],
     cover: 'linear-gradient(150deg, #111827 0%, #1f2937 45%, #f59e0b 100%)',
-    liveUrl: '#',
+    previewImage: '/project-previews/jarvish.png',   
+    liveUrl: 'https://nitinsen001.github.io/JARVIS-INTERFACE-IN-JS/',
     githubUrl: 'https://github.com/Nitinsen001/JARVIS-INTERFACE-IN-JS.git',
   },
   {
@@ -75,7 +76,8 @@ const projects = [
     year: '2023',
     tech: ['Python', 'BeautifulSoup', 'Requests', 'Scraping'],
     cover: 'linear-gradient(150deg, #3f2a14 0%, #8b5a2b 45%, #fbbf24 100%)',
-    liveUrl: '#',
+    previewImage: '/project-previews/bookscraper.png',   
+    liveUrl: 'https://bookscraperapp.streamlit.app/',
     githubUrl: 'https://github.com/Nitinsen001/book_web_scrape.git',
   },
   {
@@ -88,6 +90,7 @@ const projects = [
     year: '2023',
     tech: ['Python', 'NLP', 'Chatbot', 'Automation'],
     cover: 'linear-gradient(150deg, #052e16 0%, #166534 45%, #4ade80 100%)',
+    previewImage: '/project-previews/insurance.png',
     liveUrl: '#',
     githubUrl: 'https://github.com/Nitinsen001/INSURANCE_AGENT_CHATBOT.git',
   },
@@ -180,7 +183,8 @@ const projects = [
     year: '2021',
     tech: ['JavaScript', 'HTML', 'CSS', 'Game UI'],
     cover: 'linear-gradient(150deg, #450a0a 0%, #b91c1c 45%, #fde68a 100%)',
-    liveUrl: '#',
+    liveUrl: 'https://kbc-demo.streamlit.app',
+    previewImage: '/project-previews/kbc.png',
     githubUrl: 'https://github.com/Nitinsen001/KBC-GAME.git',
   },
   
@@ -198,11 +202,28 @@ const projects = [
     previewImage: '/project-previews/problemsolveai.png',
     githubUrl: 'https://github.com/Nitinsen001/campus_solve_ai.git',
   },
+
+  
+  {
+    number: '15',
+    title: 'Local Services',
+    tagline: 'Connecting people with trusted local service providers.',
+    description:
+      'A smart local services platform that helps users discover and connect with nearby service providers such as electricians, plumbers, carpenters, cleaners, and other professionals. Designed to simplify service discovery, improve accessibility, and make finding reliable local assistance faster and more convenient.',
+    role: 'Full Stack Developer',
+    year: '2026',
+    tech: ['Python', 'Django', 'HTML', 'CSS', 'JavaScript', 'SQLite'],
+    cover: 'linear-gradient(150deg, #052e16 0%, #166534 45%, #4ade80 100%)',
+    liveUrl: 'https://local-services-sepia.vercel.app/',
+    previewImage: '/project-previews/localservices.png',
+    githubUrl: 'https://github.com/Nitinsen001/local-services',
+  },
+
 ];
 
 const CoverFace = ({ project }) => {
-  const hasLivePreview =
-    Boolean(project.liveUrl) && project.liveUrl !== '#' && Boolean(project.previewImage);
+  const hasPreviewImage = Boolean(project.previewImage);
+  const hasLivePreview = Boolean(project.liveUrl) && project.liveUrl !== '#';
 
   return (
     <div
@@ -217,25 +238,38 @@ const CoverFace = ({ project }) => {
         }}
       />
 
-      {hasLivePreview ? (
+      {hasPreviewImage ? (
         <>
-          <a
-            href={project.liveUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={`Open ${project.title} live website`}
-            className="absolute inset-0 flex items-center justify-center bg-gray-100"
-          >
-            <img
-              src={project.previewImage}
-              alt={`${project.title} homepage`}
-              className="h-full w-full object-contain"
-              loading="lazy"
-            />
-          </a>
-          <span className="absolute top-4 right-4 z-10 rounded-full bg-black/60 p-2 text-white shadow">
-            <ExternalLink className="h-4 w-4" />
-          </span>
+          {hasLivePreview ? (
+            <a
+              href={project.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Open ${project.title} live website`}
+              className="absolute inset-0 flex items-center justify-center bg-gray-100"
+            >
+              <img
+                src={project.previewImage}
+                alt={`${project.title} homepage`}
+                className="h-full w-full object-contain"
+                loading="lazy"
+              />
+            </a>
+          ) : (
+            <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
+              <img
+                src={project.previewImage}
+                alt={`${project.title} preview`}
+                className="h-full w-full object-contain"
+                loading="lazy"
+              />
+            </div>
+          )}
+          {hasLivePreview && (
+            <span className="absolute top-4 right-4 z-10 rounded-full bg-black/60 p-2 text-white shadow">
+              <ExternalLink className="h-4 w-4" />
+            </span>
+          )}
         </>
       ) : (
         <>
@@ -558,7 +592,7 @@ const Projects = () => {
                 book (not absolutely positioned outside it), so it never
                 overflows and shrinks/wraps naturally on any screen size. */}
             <div
-              className={`hidden md:flex flex-col gap-2 justify-center shrink-0 transition-all duration-700 ${
+              className={`hidden md:flex flex-col gap-1 justify-center shrink-0 transition-all duration-700 ${
                 isBookOpen ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-6 pointer-events-none'
               }`}
             >
@@ -567,7 +601,7 @@ const Projects = () => {
                   key={p.number}
                   onClick={() => goTo(i)}
                   aria-label={`Open ${p.title}`}
-                  className={`h-8 rounded-r-md text-xs font-black tracking-wide transition-all duration-300 flex items-center justify-center px-2.5 shadow-md ${
+                  className={`h-6 rounded-r-md text-xs font-black tracking-wide transition-all duration-300 flex items-center justify-center px-2.5 shadow-md ${
                     i === active
                       ? 'w-14 bg-[#ff2a2a] text-white'
                       : 'w-9 bg-gray-200 text-gray-500 hover:w-11 hover:bg-gray-300'
