@@ -1,20 +1,21 @@
 # Video Portfolio
 
-React + Vite portfolio with a serverless contact form.
+React + Vite portfolio with a serverless contact form using Gmail SMTP.
 
 ## Contact form on Vercel
 
-The contact endpoint sends email through [Resend](https://resend.com) over HTTPS. Gmail SMTP credentials are not used, since SMTP connections are not suitable for many serverless deployments.
+In **Vercel → Project → Settings → Environment Variables**, add these variables for Production (and Preview if needed):
 
-1. Create a Resend account and generate an API key.
-2. Verify a sending domain in Resend. Set `CONTACT_FROM_EMAIL` to an address on that verified domain, such as `Portfolio <contact@example.com>`.
-3. In the Vercel project, open **Settings → Environment Variables** and add:
-   - `RESEND_API_KEY`: your Resend API key
-   - `CONTACT_EMAIL`: the inbox that should receive contact form messages
-   - `CONTACT_FROM_EMAIL`: the sender address on your verified domain
-4. Apply the variables to the Production environment (and Preview if needed), then redeploy.
+- `EMAIL_HOST` = `smtp.gmail.com`
+- `EMAIL_PORT` = `465`
+- `EMAIL_HOST_USER` = the Gmail address that should send and receive contact messages
+- `EMAIL_HOST_PASSWORD` = a Google App Password for that account (not the normal Gmail password)
 
-The local `.env` file is ignored by Git. For local use, add the same variables there and run `npm run server` alongside `npm run dev`.
+Contact messages go to `nitinsen70671@gmail.com` by default. To change the recipient later, set the optional `CONTACT_EMAIL` variable.
+
+Save the variables and redeploy the project. Keep the App Password secret; do not put it in frontend code or commit it to Git.
+
+For local development, put the same variables in the ignored `.env` file. Run `npm run server` alongside `npm run dev`.
 
 ## Development
 
@@ -23,7 +24,7 @@ npm install
 npm run dev
 ```
 
-In a second terminal, run the local API server:
+In a second terminal:
 
 ```sh
 npm run server
